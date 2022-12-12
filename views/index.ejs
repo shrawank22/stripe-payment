@@ -1,0 +1,31 @@
+<%- include("partials/header") %>
+    <div class="container">
+        <div class="row mt-3 pt-5">
+            <div class="col-md-6">
+                <h1 class="display-3">
+                    Payment With Stripe
+                </h1><p class="lead">Learn payment with stripe from scratch</p>
+                <form action="/charge" method="POST">
+                    <script
+                      src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                      data-key="pk_live_51H1m6CBVqxDuAQt22xvpznnm6KOdrsLDoergIa8rAUNaV9jfxMflo50DDMoOGeLSkD6qsYJRj8qA7kISVwIBbgm700lrgMJoGH"
+                      data-amount="50" 
+                      data-currency="inr"
+                      data-name="Payment With Stripe"
+                      data-description="By Shrawan"
+                      data-image="/img/map.jpg"
+                      data-locale="auto">
+                    </script>
+                    <script>
+                      // Hide default stripe button
+                      document.getElementsByClassName('stripe-button-el')[0].style.display = 'none';
+                    </script>
+                    <button type="submit" class="btn btn-outline-dark text-white btn-lg">Purchase For ₹0.50</button>
+                  </form>
+            </div>
+            <div class="col-md-6">
+                <img src="/img/map.jpg" class="img-fluid rounded" alt="Image">
+            </div>
+        </div>
+    </div>
+<%- include("partials/footer") %>
